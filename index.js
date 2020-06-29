@@ -1,7 +1,7 @@
 exports.base = class base {
-  async startBrowserAndPage(puppeteer) {
+  async startBrowserAndPage(puppeteer,headless) {
     this.browser = await puppeteer.launch({
-      headless: false,
+      headless,
       devtools: true,
       userDataDir: "./",
       args: ["--no-sandbox"],
