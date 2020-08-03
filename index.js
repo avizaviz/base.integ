@@ -4,7 +4,7 @@ exports.base = class base {
       headless,
       devtools: true,
       userDataDir: "./",
-      args: ["--no-sandbox"],
+      args: ['--proxy-auto-detect'],
     });
     this.page = (await this.browser.pages())[0];
     return [this.browser, this.page];
