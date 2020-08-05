@@ -5,8 +5,8 @@ exports.base = class base {
       devtools: true,
       userDataDir: "./", 
      /// args: ["--no-sandbox"],
-      args: [ '--enable-features=NetworkService ]
-      //args: [ '--ignore-certificate-errors' ],
+    
+      args: [ '--ignore-certificate-errors' ],
     });
     this.page = (await this.browser.pages())[0];
     return [this.browser, this.page];
