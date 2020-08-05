@@ -4,7 +4,8 @@ exports.base = class base {
       headless,
       devtools: true,
       userDataDir: "./", 
-      args: ["--no-sandbox"],
+     /// args: ["--no-sandbox"],
+      args: [ '--enable-features=NetworkService ]
       //args: [ '--ignore-certificate-errors' ],
     });
     this.page = (await this.browser.pages())[0];
