@@ -4,8 +4,9 @@ exports.base = class base {
       headless,
       devtools: true,
       userDataDir: "./",
-      //args: ["--no-sandbox"],
-      args: [ '--ignore-certificate-errors' ],
+      ignoreHTTPSErrors: true,
+      args: ["--no-sandbox"],
+      //args: [ '--ignore-certificate-errors' ],
     });
     this.page = (await this.browser.pages())[0];
     return [this.browser, this.page];
