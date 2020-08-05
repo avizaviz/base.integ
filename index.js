@@ -3,8 +3,7 @@ exports.base = class base {
     this.browser = await puppeteer.launch({
       headless,
       devtools: true,
-      userDataDir: "./",
-      ignoreHTTPSErrors: true,
+      userDataDir: "./", 
       args: ["--no-sandbox"],
       //args: [ '--ignore-certificate-errors' ],
     });
